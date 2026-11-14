@@ -13,13 +13,17 @@ Backup/
 Samples/
 
 # Logic: the audio inside a project, its own backups, undo and autosave data
-*.logicx/Media/
-*.logicx/Alternatives/*/Undo Data.nosync/
-*.logicx/Alternatives/*/Autosave/
+# (**/ so they match at any depth: a pattern with a slash in it is otherwise tied to this folder)
+**/*.logicx/Media/
+**/*.logicx/Alternatives/*/Project File Backups/
+**/*.logicx/Alternatives/*/Undo Data.nosync/
+**/*.logicx/Alternatives/*/Autosave/
 
 # Analysis by-products
 *.npz
 __pycache__/
 .venv/
 .DS_Store
-*.logicx/Alternatives/*/Project File Backups/
+
+# Claude Code: this Mac's own permissions
+.claude/settings.local.json
