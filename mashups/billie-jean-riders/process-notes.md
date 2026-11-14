@@ -81,4 +81,9 @@ Timing of each song's kicks against a steady 117 (measured from the drums stems)
 | pc | on the beat | slowly falls behind: about 25 ms late by the end |
 | toxic | about 27 ms late | stays the same: a fixed lateness, no drift |
 
-pc's and toxic's small errors are left for Ableton (next section) rather than redone in Logic.
+pc's and toxic's small errors are left for Ableton rather than redone in Logic. pc's is fixed in the set:
+its clips play at 116.99 instead of 117 (`scripts/build.py`).
+
+**Still to check:** toxic's fixed 27 ms lateness is not fixed in the set. It matters only if toxic is
+used, mainly with its drums against bj's (a slight double hit). The fix: move every toxic clip 27 ms
+earlier.
