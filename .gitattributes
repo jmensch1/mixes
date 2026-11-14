@@ -1,0 +1,2 @@
+# Ableton sets are gzipped XML: with `git config diff.als.textconv "gzip -dc"`, git diff shows the XML
+*.als diff=als
